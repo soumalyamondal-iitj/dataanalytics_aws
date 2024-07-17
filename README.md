@@ -64,32 +64,29 @@ and visualizations of aggregated data.
 - `aggregation/`: Redshift configurations and queries.
 - `visualization/`: QuickSight dashboard configurations.
 
+## Directory Structure
 
--- aggregation
-    -- \employee_info.sql
-    -- \redshift_cluster_properties.json
--- dataset
-    -- \HR Dataset.csv
--- images
-    -- \glue_studio.JPG
-    -- \kenesis_firehose.JPG
-    -- \kenesis_stream.JPG
-    -- \redshift_cluster.JPG
-    -- \redshift_editor.JPG
-    -- \s3_bucket.JPG
--- ingestion
-    -- \firehose_stream_configuration.json
-    -- \kinesis_stream_configuration.json
--- processing
-    -- \aws-glue-job-ade.py
--- storage
-    -- \s3_bucket_acl.json
-    -- \s3_bucket_location.json
-    -- \s3_bucket_policy.json
--- visualization
-    -- \age_vs_salary.pdf
-    -- \dept_vs_salary.pdf
-    -- \skills_vs_salary.pdf
+\dataanalytics_aws/
+├── ingestion/
+│   ├── firehose_stream_configuration.json
+│   ├── kinesis_stream_configuration.json
+├── processing/
+│   ├── aws-glue-job-ade.py
+├── aggregation/
+│   ├── employee_info.sql
+│   └── redshift_cluster_properties.json
+├── visualization/
+│   ├── age_vs_salary.pdf
+│   ├── dept_vs_salary.pdf
+│   ├── skills_vs_salary.pdf
+│   ├── age_vs_salary.png
+│   ├── dept_vs_salary.png
+│   ├── skills_vs_salary.png
+├── storage/
+│   ├── s3_bucket_acl.json
+│   ├── s3_bucket_location.json
+│   ├── s3_bucket_policy.json
+└── README.md
 
 ### Setup Instructions
 
@@ -129,12 +126,16 @@ and visualizations of aggregated data.
 ## Demonstrattion of Data Visualization 
 - Skills vs Salary distribution
 [QuickSight](./visualization/skills_vs_salary.pdf)
+![QuickSight](./visualization/skills_vs_salary.png)
 
 - Department vs Salary distribution
 [QuickSight](./visualization/dept_vs_salary.pdf)
+![QuickSight](./visualization/dept_vs_salary.png)
 
 - Department vs Salary distribution
 [QuickSight](./visualization/age_vs_salary.pdf)
+![QuickSight](./visualization/age_vs_salary.png)
+
 
 ## Key Features
 ### Data Storage
