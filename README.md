@@ -31,9 +31,7 @@ Design the high-level architecture of the data engineering platform, including t
 
 
 ## Architecture Overview
-Architechture-diagram.png
-
-![Architecture Diagram](./architecture-diagram.png)
+![Architecture Diagram](/Architechture-diagram.png)
 
 ###Design Components
     #### Data Ingestion
