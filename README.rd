@@ -31,6 +31,7 @@ Design the high-level architecture of the data engineering platform, including t
 
 
 ## Architecture Overview
+Architechture-diagram.png
 
 ![Architecture Diagram](./architecture-diagram.png)
 
@@ -86,6 +87,11 @@ Design the high-level architecture of the data engineering platform, including t
 ##Key features
 
 ##Challenges encountered
+    1. Acces issues for resources
+        a. Setting correct IAM role for resources
+        b. VPC and v-net setting
+    2. Data type mismatch issue during data loading to Redshift
+    3. 
 
 ##Lessons learned
 
