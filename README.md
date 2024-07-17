@@ -66,7 +66,7 @@ and visualizations of aggregated data.
 
 ## Directory Structure
 
-\'''
+'''
 dataanalytics_aws/
 ├── ingestion/
 │   ├── firehose_stream_configuration.json
@@ -88,7 +88,7 @@ dataanalytics_aws/
 │   ├── s3_bucket_location.json
 │   ├── s3_bucket_policy.json
 └── README.md
-\'''
+'''
 
 ### Setup Instructions
 
@@ -126,16 +126,16 @@ dataanalytics_aws/
 
 
 ## Demonstrattion of Data Visualization 
-- Skills vs Salary distribution
-[QuickSight](./visualization/skills_vs_salary.pdf)
+- [Skills vs Salary distribution](./visualization/skills_vs_salary.pdf)
+
 ![QuickSight](./visualization/skills_vs_salary.jpg)
 
-- Department vs Salary distribution
-[QuickSight](./visualization/dept_vs_salary.pdf)
+- [ Department vs Salary distribution](./visualization/dept_vs_salary.pdf)
+
 ![QuickSight](./visualization/dept_vs_salary.jpg)
 
-- Department vs Salary distribution
-[QuickSight](./visualization/age_vs_salary.pdf)
+- [Department vs Salary distribution](./visualization/age_vs_salary.pdf)
+
 ![QuickSight](./visualization/age_vs_salary.jpg)
 
 
