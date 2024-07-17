@@ -11,15 +11,15 @@
 - Lessons learned
 
 ## Background
-    This repository contains the code and configuration files for a
-    scalable data engineering platform built using AWS services.
-    In modern data-driven organizations, the ability to efficiently
-    ingest, store, process, aggregate, and visualize large volumes of data
-    is critical. This project aims to design and implement a scalable data
-    engineering platform using AWS services to handle data sizes ranging
-    from 10MB to 100GB. The platform will enable real-time data ingestion,
-    scalable data storage, efficient data processing, and insightful data
-    visualization.
+This repository contains the code and configuration files for a
+scalable data engineering platform built using AWS services.
+In modern data-driven organizations, the ability to efficiently
+ingest, store, process, aggregate, and visualize large volumes of data
+is critical. This project aims to design and implement a scalable data
+engineering platform using AWS services to handle data sizes ranging
+from 10MB to 100GB. The platform will enable real-time data ingestion,
+scalable data storage, efficient data processing, and insightful data
+visualization.
 
 ## Requirement
 Design the high-level architecture of the data engineering platform, including the following components:
@@ -85,11 +85,11 @@ and visualizations of aggregated data.
 ## Key features
 
 ## Challenges encountered
-    1. Acces issues for resources
-        a. Setting correct IAM role for resources
-        b. VPC and v-net setting
-    2. Data type mismatch issue during data loading to Redshift
-    3. 
+1. Acces issues for resources
+    a. Setting correct IAM role for resources
+    b. VPC and v-net setting
+2. Data type mismatch issue during data loading to Redshift
+3. 
 
 ## Lessons learned
 
