@@ -126,15 +126,15 @@ and visualizations of aggregated data.
 - Select datasource as Redshift and select the Redshift clustername to load the data
 
 
-## Demonstrattion of Data Visualization
+## Demonstrattion of Data Visualization 
 - Skills vs Salary distribution
-[Kenesis Firehose](./visualization/skills_vs_salary.pdf)
+[QuickSight](./visualization/skills_vs_salary.pdf)
 
 - Department vs Salary distribution
-[Kenesis Firehose](./visualization/dept_vs_salary.pdf)
+[QuickSight](./visualization/dept_vs_salary.pdf)
 
 - Department vs Salary distribution
-[Kenesis Firehose](./visualization/age_vs_salary.pdf)
+[QuickSight](./visualization/age_vs_salary.pdf)
 
 ## Key Features
 ### Data Storage
