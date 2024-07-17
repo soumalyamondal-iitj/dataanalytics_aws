@@ -66,29 +66,7 @@ and visualizations of aggregated data.
 
 ## Directory Structure
 
-'''
-dataanalytics_aws/
-├── ingestion/
-│   ├── firehose_stream_configuration.json
-│   ├── kinesis_stream_configuration.json
-├── processing/
-│   ├── aws-glue-job-ade.py
-├── aggregation/
-│   ├── employee_info.sql
-│   └── redshift_cluster_properties.json
-├── visualization/
-│   ├── age_vs_salary.pdf
-│   ├── dept_vs_salary.pdf
-│   ├── skills_vs_salary.pdf
-│   ├── age_vs_salary.png
-│   ├── dept_vs_salary.png
-│   ├── skills_vs_salary.png
-├── storage/
-│   ├── s3_bucket_acl.json
-│   ├── s3_bucket_location.json
-│   ├── s3_bucket_policy.json
-└── README.md
-'''
+![DS](./images/directory_structure.JPG)
 
 ### Setup Instructions
 
@@ -128,15 +106,15 @@ dataanalytics_aws/
 ## Demonstrattion of Data Visualization 
 - [Skills vs Salary distribution](./visualization/skills_vs_salary.pdf)
 
-![QuickSight](./visualization/skills_vs_salary.jpg)
+![QuickSight](./visualization/skills_vs_salary.JPG)
 
 - [ Department vs Salary distribution](./visualization/dept_vs_salary.pdf)
 
-![QuickSight](./visualization/dept_vs_salary.jpg)
+![QuickSight](./visualization/dept_vs_salary.JPG)
 
 - [Department vs Salary distribution](./visualization/age_vs_salary.pdf)
 
-![QuickSight](./visualization/age_vs_salary.jpg)
+![QuickSight](./visualization/age_vs_salary.JPG)
 
 
 ## Key Features
