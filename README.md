@@ -128,13 +128,13 @@ and visualizations of aggregated data.
 
 ## Demonstrattion of Data Visualization
 - Skills vs Salary distribution
-![Kenesis Firehose](./visualization/skills_vs_salary.pdf)
+[Kenesis Firehose](./visualization/skills_vs_salary.pdf)
 
 - Department vs Salary distribution
-![Kenesis Firehose](./visualization/dept_vs_salary.pdf)
+[Kenesis Firehose](./visualization/dept_vs_salary.pdf)
 
 - Department vs Salary distribution
-![Kenesis Firehose](./visualization/age_vs_salary.pdf)
+[Kenesis Firehose](./visualization/age_vs_salary.pdf)
 
 ## Key Features
 ### Data Storage
