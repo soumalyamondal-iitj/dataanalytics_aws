@@ -1,4 +1,4 @@
-#Data Engineering Platform for Scalable Data Processing
+# Data Engineering Platform for Scalable Data Processing
 
 ## Table of Contents
 - Background
@@ -33,65 +33,65 @@ Design the high-level architecture of the data engineering platform, including t
 ## Architecture Overview
 ![Architecture Diagram](/Architechture-diagram.png)
 
-###Design Components
-    #### Data Ingestion
-    - AWS Kinesis Data Streams: Used for real-time data ingestion from
-    various sources.
-    - AWS Firehose: Buffers and batches incoming data before storing it in AWS S3.
+### Design Components
+#### Data Ingestion
+- AWS Kinesis Data Streams: Used for real-time data ingestion from
+various sources.
+- AWS Firehose: Buffers and batches incoming data before storing it in AWS S3.
 
-    #### Data Storage
-    - AWS S3: Provides durable and scalable storage for raw and processed data.
+#### Data Storage
+- AWS S3: Provides durable and scalable storage for raw and processed data.
 
-    #### Data Processing
-    - AWS Glue: A managed ETL service that processes and transforms data
-    stored in S3.
+#### Data Processing
+- AWS Glue: A managed ETL service that processes and transforms data
+stored in S3.
 
-    #### Data Aggregation
-    - AWS Redshift: A data warehouse that aggregates processed data for
-    fast querying and analysis.
+#### Data Aggregation
+- AWS Redshift: A data warehouse that aggregates processed data for
+fast querying and analysis.
 
-    #### Data Visualization
-    - AWS QuickSight: A BI service that provides interactive dashboards
-    and visualizations of aggregated data.
+#### Data Visualization
+- AWS QuickSight: A BI service that provides interactive dashboards
+and visualizations of aggregated data.
 
 
 ## Implementation
-    ### Repository Structure - Code samples, scripts, and configuration files
+### Repository Structure - Code samples, scripts, and configuration files
 
-    - `ingestion/`: Code and configurations for data ingestion.
-    - `storage/`: S3 bucket configurations.
-    - `processing/`: AWS Glue job scripts.
-    - `aggregation/`: Redshift configurations and queries.
-    - `visualization/`: QuickSight dashboard configurations.
+- `ingestion/`: Code and configurations for data ingestion.
+- `storage/`: S3 bucket configurations.
+- `processing/`: AWS Glue job scripts.
+- `aggregation/`: Redshift configurations and queries.
+- `visualization/`: QuickSight dashboard configurations.
 
-    ### Setup Instructions
+### Setup Instructions
 
-    1. Set up AWS Kinesis Data Streams and AWS Firehose for data ingestion.
-    2. Configure an S3 bucket for raw data storage as files.
-    3. Set up AWS Glue for data processing, including creating Glue jobs for ETL 
-        to trasform data from S3 to Redshift tables after processing cleaning.
-    4. Configure AWS Redshift for data aggregation and create necessary tables.
-    5. Set up AWS QuickSight for data visualization and create sample dashboards.
+1. Set up AWS Kinesis Data Streams and AWS Firehose for data ingestion.
+2. Configure an S3 bucket for raw data storage as files.
+3. Set up AWS Glue for data processing, including creating Glue jobs for ETL 
+    to trasform data from S3 to Redshift tables after processing cleaning.
+4. Configure AWS Redshift for data aggregation and create necessary tables.
+5. Set up AWS QuickSight for data visualization and create sample dashboards.
 
 
 ## Demonstrattion of functionality
-    ###Data Ingestion
-    ###Data Storage
-    ###Data Processing
-    ###Data Aggregation
-    ###Data Visualization
+### Data Ingestion
+### Data Storage
+### Data Processing
+### Data Aggregation
+### Data Visualization
 
 
-##Key features
+## Key features
 
-##Challenges encountered
+## Challenges encountered
     1. Acces issues for resources
         a. Setting correct IAM role for resources
         b. VPC and v-net setting
     2. Data type mismatch issue during data loading to Redshift
     3. 
 
-##Lessons learned
+## Lessons learned
 
 
 
