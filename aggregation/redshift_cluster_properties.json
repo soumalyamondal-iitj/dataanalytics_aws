@@ -1,0 +1,91 @@
+{
+    "Clusters": [
+        {
+            "ClusterIdentifier": "redshift-cluster-1",
+            "NodeType": "dc2.large",
+            "ClusterStatus": "available",
+            "ClusterAvailabilityStatus": "Available",
+            "MasterUsername": "awsuser",
+            "DBName": "dev",
+            "Endpoint": {
+                "Address": "redshift-cluster-1.ckudvww7yfrc.ap-south-1.redshift.amazonaws.com",
+                "Port": 5439
+            },
+            "ClusterCreateTime": "2024-07-02T11:44:48.089000+00:00",
+            "AutomatedSnapshotRetentionPeriod": 1,
+            "ManualSnapshotRetentionPeriod": -1,
+            "ClusterSecurityGroups": [],
+            "VpcSecurityGroups": [
+                {
+                    "VpcSecurityGroupId": "sg-09cef2f5abf1b9990",
+                    "Status": "active"
+                }
+            ],
+            "ClusterParameterGroups": [
+                {
+                    "ParameterGroupName": "default.redshift-1.0",
+                    "ParameterApplyStatus": "in-sync"
+                }
+            ],
+            "ClusterSubnetGroupName": "default",
+            "VpcId": "vpc-0b9709726a026784e",
+            "AvailabilityZone": "ap-south-1a",
+            "PreferredMaintenanceWindow": "thu:05:30-thu:06:00",
+            "PendingModifiedValues": {},
+            "ClusterVersion": "1.0",
+            "AllowVersionUpgrade": true,
+            "NumberOfNodes": 1,
+            "PubliclyAccessible": true,
+            "Encrypted": false,
+            "RestoreStatus": {
+                "Status": "completed",
+                "CurrentRestoreRateInMegaBytesPerSecond": 0.2875,
+                "SnapshotSizeInMegaBytes": 92,
+                "ProgressInMegaBytes": 92,
+                "ElapsedTimeInSeconds": 320,
+                "EstimatedTimeToCompletionInSeconds": 0
+            },
+            "ClusterPublicKey": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCDRsxANi77VsSMOFyDDo5pgb2YAE3qBFIzAc9BsISM5yzgS9RbMC6MWc6ocBxiZitLM3jfvX/MoFiwTE0Pd2DiKlsi+U5fZG0oVORGowQwfTb+ArkSBC5v2dzC2RJRYWjZyOtxP2ZoYjeckLrxvNlJEfPvSFSfrR3/7vGtTPZ6hZF4KW/QLj8dJCfoA5pE6Sg/qVGNxa1iI0+GULo3rNWpVxFZDLf+1FrNmNZbRqWW1iIK5BTFZ/VazxaQVJTynRysrZU5xnaATinQNfbU6M+oG4/KU/IQpsVCLW4mMS5CDnZkz1Z3D1jn6Y7SDKIiFsTjkR45XKh/Ov4FgXwM/OPn Amazon-Redshift\n",
+            "ClusterNodes": [
+                {
+                    "NodeRole": "SHARED",
+                    "PrivateIPAddress": "172.31.33.199",
+                    "PublicIPAddress": "3.109.30.32"
+                }
+            ],
+            "ClusterRevisionNumber": "70890",
+            "Tags": [],
+            "EnhancedVpcRouting": false,
+            "IamRoles": [
+                {
+                    "IamRoleArn": "arn:aws:iam::381492295267:role/aws-redshift-s3-full-access",
+                    "ApplyStatus": "in-sync"
+                },
+                {
+                    "IamRoleArn": "arn:aws:iam::381492295267:role/aws-service-role/redshift.amazonaws.com/AWSServiceRoleForRedshift",
+                    "ApplyStatus": "in-sync"
+                },
+                {
+                    "IamRoleArn": "arn:aws:iam::381492295267:role/s3-full-acess",
+                    "ApplyStatus": "in-sync"
+                },
+                {
+                    "IamRoleArn": "arn:aws:iam::381492295267:role/service-role/AmazonRedshift-CommandsAccessRole-20240703T195131",
+                    "ApplyStatus": "in-sync"
+                }
+            ],
+            "MaintenanceTrackName": "current",
+            "DeferredMaintenanceWindows": [],
+            "NextMaintenanceWindowStartTime": "2024-07-18T05:30:00+00:00",
+            "AvailabilityZoneRelocationStatus": "disabled",
+            "ClusterNamespaceArn": "arn:aws:redshift:ap-south-1:381492295267:namespace:e9cd3ab4-735c-481b-b303-d6ff9f080eb5",
+            "TotalStorageCapacityInMegaBytes": 400000,
+            "AquaConfiguration": {
+                "AquaStatus": "disabled",
+                "AquaConfigurationStatus": "auto"
+            },
+            "DefaultIamRoleArn": "arn:aws:iam::381492295267:role/service-role/AmazonRedshift-CommandsAccessRole-20240703T195131",
+            "MultiAZ": "Disabled"
+        }
+    ]
+}

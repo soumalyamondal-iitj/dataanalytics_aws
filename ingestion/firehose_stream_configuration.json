@@ -1,0 +1,101 @@
+{
+    "DeliveryStreamDescription": {
+        "DeliveryStreamName": "aws-kenesis-fh-ade",
+        "DeliveryStreamARN": "arn:aws:firehose:ap-south-1:381492295267:deliverystream/aws-kenesis-fh-ade",
+        "DeliveryStreamStatus": "ACTIVE",
+        "DeliveryStreamType": "KinesisStreamAsSource",
+        "VersionId": "2",
+        "CreateTimestamp": "2024-07-14T07:47:51.639000+00:00",
+        "LastUpdateTimestamp": "2024-07-17T12:12:44.281000+00:00",
+        "Source": {
+            "KinesisStreamSourceDescription": {
+                "KinesisStreamARN": "arn:aws:kinesis:ap-south-1:381492295267:stream/aws_kenesis_ade",
+                "RoleARN": "arn:aws:iam::381492295267:role/service-role/KinesisFirehoseServiceRole-aws-kenesis--ap-south-1-1720942992503",
+                "DeliveryStartTimestamp": "2024-07-14T07:47:51.639000+00:00"
+            }
+        },
+        "Destinations": [
+            {
+                "DestinationId": "destinationId-000000000001",
+                "S3DestinationDescription": {
+                    "RoleARN": "arn:aws:iam::381492295267:role/service-role/KinesisFirehoseServiceRole-aws-kenesis--ap-south-1-1720942992503",
+                    "BucketARN": "arn:aws:s3:::s3-kinesis-etl-bucket-ade",
+                    "Prefix": "!{partitionKeyFromQuery:EmployeeID}/",
+                    "ErrorOutputPrefix": "err",
+                    "BufferingHints": {
+                        "SizeInMBs": 128,
+                        "IntervalInSeconds": 300
+                    },
+                    "CompressionFormat": "UNCOMPRESSED",
+                    "EncryptionConfiguration": {
+                        "NoEncryptionConfig": "NoEncryption"
+                    },
+                    "CloudWatchLoggingOptions": {
+                        "Enabled": true,
+                        "LogGroupName": "/aws/kinesisfirehose/aws-kenesis-fh-ade",
+                        "LogStreamName": "DestinationDelivery"
+                    }
+                },
+                "ExtendedS3DestinationDescription": {
+                    "RoleARN": "arn:aws:iam::381492295267:role/service-role/KinesisFirehoseServiceRole-aws-kenesis--ap-south-1-1720942992503",
+                    "BucketARN": "arn:aws:s3:::s3-kinesis-etl-bucket-ade",
+                    "Prefix": "!{partitionKeyFromQuery:EmployeeID}/",
+                    "ErrorOutputPrefix": "err",
+                    "BufferingHints": {
+                        "SizeInMBs": 128,
+                        "IntervalInSeconds": 300
+                    },
+                    "CompressionFormat": "UNCOMPRESSED",
+                    "EncryptionConfiguration": {
+                        "NoEncryptionConfig": "NoEncryption"
+                    },
+                    "CloudWatchLoggingOptions": {
+                        "Enabled": true,
+                        "LogGroupName": "/aws/kinesisfirehose/aws-kenesis-fh-ade",
+                        "LogStreamName": "DestinationDelivery"
+                    },
+                    "ProcessingConfiguration": {
+                        "Enabled": true,
+                        "Processors": [
+                            {
+                                "Type": "RecordDeAggregation",
+                                "Parameters": [
+                                    {
+                                        "ParameterName": "SubRecordType",
+                                        "ParameterValue": "JSON"
+                                    }
+                                ]
+                            },
+                            {
+                                "Type": "MetadataExtraction",
+                                "Parameters": [
+                                    {
+                                        "ParameterName": "MetadataExtractionQuery",
+                                        "ParameterValue": "{EmployeeID:.EmployeeID}"
+                                    },
+                                    {
+                                        "ParameterName": "JsonParsingEngine",
+                                        "ParameterValue": "JQ-1.6"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "S3BackupMode": "Disabled",
+                    "DataFormatConversionConfiguration": {
+                        "Enabled": false
+                    },
+                    "DynamicPartitioningConfiguration": {
+                        "RetryOptions": {
+                            "DurationInSeconds": 60
+                        },
+                        "Enabled": true
+                    },
+                    "FileExtension": "",
+                    "CustomTimeZone": "UTC"
+                }
+            }
+        ],
+        "HasMoreDestinations": false
+    }
+}

@@ -64,10 +64,44 @@ and visualizations of aggregated data.
 - `aggregation/`: Redshift configurations and queries.
 - `visualization/`: QuickSight dashboard configurations.
 
+
+- aggregation
+-- \employee_info.sql
+-- \redshift_cluster_properties.json
+- dataset
+-- \HR Dataset.csv
+- images
+-- \glue_studio.JPG
+-- \kenesis_firehose.JPG
+-- \kenesis_stream.JPG
+-- \redshift_cluster.JPG
+-- \redshift_editor.JPG
+-- \s3_bucket.JPG
+- ingestion
+-- \firehose_stream_configuration.json
+-- \kinesis_stream_configuration.json
+- processing
+-- \aws-glue-job-ade.py
+- storage
+-- \s3_bucket_acl.json
+-- \s3_bucket_location.json
+-- \s3_bucket_policy.json
+- visualization
+-- \age_vs_salary.pdf
+-- \dept_vs_salary.pdf
+-- \skills_vs_salary.pdf
+
 ### Setup Instructions
 
 1. Set up AWS Kinesis Data Streams and AWS Firehose for data ingestion.
+![Kenesis Data Stream](./images/kenesis_stream.JPG)
+
+![Kenesis Data Stream](./images/kenesis_stream.JPG)
+
 2. Configure an S3 bucket for raw data storage as files.
+
+
+
 3. Set up AWS Glue for data processing, including creating Glue jobs for ETL 
     to trasform data from S3 to Redshift tables after processing cleaning.
 4. Configure AWS Redshift for data aggregation and create necessary tables.
