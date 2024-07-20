@@ -5,7 +5,7 @@
 
 ## Assignment
 - Please refer assignment specific README files here.
-   - Assignment 1 (Architecture Design and Setup) : https://github.com/soumalyamondal-iitj/dataanalytics_aws/blob/main/assignment/1/README.md
+   - Assignment 1 (Architecture Design and Setup) : [README.md](https://github.com/soumalyamondal-iitj/dataanalytics_aws/blob/main/assignment/1/README.md)
    - Assignment 2 (Data Ingestion and Processing) : https://github.com/soumalyamondal-iitj/dataanalytics_aws/blob/main/assignment/2/README.md
    - Assignment 3 (Data Aggregation and Visualization) : https://github.com/soumalyamondal-iitj/dataanalytics_aws/blob/main/assignment/3/README.md
 
