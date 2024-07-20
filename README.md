@@ -3,6 +3,12 @@
 ## Contributor
 - Soumalya Mondal (G23AI1042)
 
+## Assignment
+- Please refer assignment specific README files here.
+   - Assignment 1 README.md file :
+   - Assignment 2 README.md file :
+   - Assignment 3 README.md file : 
+
 ## Table of Contents
 - Overview
 - Background
