@@ -136,33 +136,25 @@ and visualizations of aggregated data.
 
 ## Key Features
 ### Data Storage
-- **Scalable Storage**:
+- Scalable Storage**:
   - AWS S3 for storing raw and processed data.
 
 ### Data Processing
-- **ETL (Extract, Transform, Load)**:
+- ETL (Extract, Transform, Load)**:
   - AWS Glue for data transformation and processing.
   - Glue jobs for cleaning and enriching data.
 
 ### Data Aggregation
-- **Data Warehousing**:
+- Data Warehousing**:
   - AWS Redshift for data aggregation and fast querying.
   - Optimized queries for performance.
 
 ### Data Visualization
-- **Business Intelligence (BI)**:
+- Business Intelligence:
   - AWS QuickSight for interactive dashboards and visualizations.
 
-## Challenges encountered
-- Acces issues for resources
-    a. Setting correct IAM role for resources
-    b. VPC and v-net setting
-- Data type mismatch issue during data loading to Redshift
-- Ensuring the platform can handle varying data sizes
-efficiently.
-- Structuring S3 buckets for efficient data management.
-- Implementing robust validation and cleansing processes.
-- Optimizing Redshift queries for large datasets.
+
+
 
 ## Retention policy
 - Data retention policies can be enforced through a combination of S3 bucket policies, access control lists (ACLs), and object lock features.
@@ -192,97 +184,107 @@ efficiently.
 
 ## Security best practices
 
-### Bucket Policies and IAM Policies
-   Least Privilege Principle: Grant the minimal level of access necessary for users to perform their tasks.
-   Bucket Policies: Use bucket policies to define access at the bucket level.
-   IAM Policies: Use IAM policies to manage access at the user or group level.
-   policy:
-   
-   {
-     "Version": "2012-10-17",
-     "Statement": [
-       {
-         "Sid": "AllowOnlyReadAccess",
-         "Effect": "Allow",
-         "Principal": "*",
-         "Action": "s3:GetObject",
-         "Resource": "arn:aws:s3:::s3-kinesis-etl-bucket-ade/*"
-       }
-     ]
-   }
-
-### Enable Server-Side Encryption
-- SSE-S3: Amazon S3 manages the encryption keys.
-- SSE-KMS: AWS Key Management Service (KMS) manages the encryption keys.
-- SSE-C: You manage the encryption keys.
-- Code:
-  import boto3
-
-   s3 = boto3.client('s3')
-   s3.put_bucket_encryption(
-       Bucket='s3-kinesis-etl-bucket-ade',
-       ServerSideEncryptionConfiguration={
-           'Rules': [
-               {
-                   'ApplyServerSideEncryptionByDefault': {
-                       'SSEAlgorithm': 'AES256'
-                   }
-               }
+   ### Bucket Policies and IAM Policies
+      - Least Privilege Principle: Grant the minimal level of access necessary for users to perform their tasks.
+         Bucket Policies: Use bucket policies to define access at the bucket level.
+         IAM Policies: Use IAM policies to manage access at the user or group level.
+      - policy:
+      
+         {
+           "Version": "2012-10-17",
+           "Statement": [
+             {
+               "Sid": "AllowOnlyReadAccess",
+               "Effect": "Allow",
+               "Principal": "*",
+               "Action": "s3:GetObject",
+               "Resource": "arn:aws:s3:::s3-kinesis-etl-bucket-ade/*"
+             }
            ]
-       }
-   )
-
+         }
+   
+   ### Enable Server-Side Encryption
+   - SSE-S3: Amazon S3 manages the encryption keys.
+   - SSE-KMS: AWS Key Management Service (KMS) manages the encryption keys.
+   - SSE-C: You manage the encryption keys.
+   - Code:
+     import boto3
+   
+      s3 = boto3.client('s3')
+      s3.put_bucket_encryption(
+          Bucket='s3-kinesis-etl-bucket-ade',
+          ServerSideEncryptionConfiguration={
+              'Rules': [
+                  {
+                      'ApplyServerSideEncryptionByDefault': {
+                          'SSEAlgorithm': 'AES256'
+                      }
+                  }
+              ]
+          }
+      )
 
 
 
 ## Cost optimization
-### Use Appropriate Storage Classes
-
-   Amazon S3 offers several storage classes designed for different use cases. Choosing the right storage class for your data can significantly reduce costs.
+   ### Use Appropriate Storage Classes
    
-   S3 Standard: For frequently accessed data.
-   S3 Intelligent-Tiering: Automatically moves data between two access tiers when access patterns change, optimizing costs.
-   S3 Standard-IA (Infrequent Access): For data that is accessed less frequently but requires rapid access when needed.
-   S3 One Zone-IA: For infrequently accessed data that does not require multiple Availability Zone resilience.
-   S3 Glacier: For long-term archival with retrieval times ranging from minutes to hours.
-   S3 Glacier Deep Archive: For the lowest-cost storage with retrieval times of 12 hours or more.
-
-   Code:
-   import boto3
-
-   s3 = boto3.client('s3')
+      - Amazon S3 offers several storage classes designed for different use cases. Choosing the right storage class for your data can significantly reduce costs.
+      
+      - S3 Standard: For frequently accessed data.
+      - S3 Intelligent-Tiering: Automatically moves data between two access tiers when access patterns change, optimizing costs.
+      - S3 Standard-IA (Infrequent Access): For data that is accessed less frequently but requires rapid access when needed.
+      - S3 One Zone-IA: For infrequently accessed data that does not require multiple Availability Zone resilience.
+      - S3 Glacier: For long-term archival with retrieval times ranging from minutes to hours.
+      - S3 Glacier Deep Archive: For the lowest-cost storage with retrieval times of 12 hours or more.
    
-   s3.copy_object(
-       Bucket='my-bucket',
-       CopySource='s3-kinesis-etl-bucket-ade/my-object',
-       Key='my-object',
-       StorageClass='GLACIER'
-   )
-   
-   ### Implement Lifecycle Policies
-   - Lifecycle policies help automate the transition of objects to cheaper storage classes and the expiration (deletion) of objects that are no longer needed.
-   - Policy:
-    {
-     "Rules": [
+      - Code:
+         import boto3
+      
+         s3 = boto3.client('s3')
+         
+         s3.copy_object(
+             Bucket='my-bucket',
+             CopySource='s3-kinesis-etl-bucket-ade/my-object',
+             Key='my-object',
+             StorageClass='GLACIER'
+         )
+      
+      ### Implement Lifecycle Policies
+      - Lifecycle policies help automate the transition of objects to cheaper storage classes and the expiration (deletion) of objects that are no longer needed.
+      - Policy:
        {
-         "ID": "Move to Glacier and Expire",
-         "Status": "Enabled",
-         "Filter": {
-           "Prefix": ""
-         },
-         "Transitions": [
-           {
-             "Days": 30,
-             "StorageClass": "GLACIER"
-           }
-         ],
-         "Expiration": {
-           "Days": 365
-         }
-       }
-     ]
-   }
+        "Rules": [
+          {
+            "ID": "Move to Glacier and Expire",
+            "Status": "Enabled",
+            "Filter": {
+              "Prefix": ""
+            },
+            "Transitions": [
+              {
+                "Days": 30,
+                "StorageClass": "GLACIER"
+              }
+            ],
+            "Expiration": {
+              "Days": 365
+            }
+          }
+        ]
+      }
 
+
+## Challenges encountered
+- Acces issues for resources
+    a. Setting correct IAM role for resources
+    b. VPC and v-net setting
+- Data type mismatch issue during data loading to Redshift
+- Ensuring the platform can handle varying data sizes
+efficiently.
+- Structuring S3 buckets for efficient data management.
+- Implementing robust validation and cleansing processes.
+- Optimizing Redshift queries for large datasets.
 
 
 ## Lessons learned
