@@ -106,6 +106,21 @@ and visualizations of aggregated data.
 - Create an account in AWS Quicksight
 - Select datasource as Redshift and select the Redshift clustername to load the data
 
+## Build Model and Deployment
+- Please refer the https://github.com/soumalyamondal-iitj/dataanalytics_aws/edit/main/SalaryAnalytics.py for the model implementation. We evaluated LinearRegression, DecisionTreeRegressor, RandomForestRegressor models and based on the RMSE values, RandomForest is determined as best fit model
+- This model uses data from S3 which is stored through the data streaming
+- Model is registered in MLFlow to track and log all the details of your machine learning experiments, including parameters, metrics, artifacts (such as models), and source code.
+
+  ### Model Architecture and Deployment digaram:
+  
+  ![Model](./images/Model_Building_deployment_architecture.png)
+
+  ### Deployment in Huggingface
+
+  Public URL for model: https://huggingface.co/spaces/soumalya-iitj/HRAnalytics_PredictSalary
+  
+  ![Model](./images/HuggingFace.png)
+
 
 ## Demonstrattion of Data Visualization 
 
