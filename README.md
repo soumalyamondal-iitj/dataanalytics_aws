@@ -116,7 +116,7 @@ and visualizations of aggregated data.
   ![Model](./images/Model_Building_deployment_architecture.png)
 
   ### MLFlow - Tracking of model parameters
-  ![Model](./images/HuggingFace.png)
+  ![Model](./images/MLFlow.png)
 
   
   ### Deployment in Huggingface
