@@ -106,7 +106,7 @@ and visualizations of aggregated data.
 ## Demonstrattion of Data Visualization 
 
 - [HR Analytics Visualization-QuickSight](./visualization/HRAnalytics-Visualization-QuickSight.pdf)
-  ![QuickSight](./visualization/HRAnalytics-Visualization-QuickSight.JPG)
+  ![QuickSight](./visualization/HRAnalytics-Visualization-QuickSight.png)
 
 
 - [Skills vs Salary distribution](./visualization/skills_vs_salary.pdf)
