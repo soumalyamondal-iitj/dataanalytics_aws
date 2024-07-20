@@ -109,19 +109,6 @@ and visualizations of aggregated data.
   ![QuickSight](./visualization/HRAnalytics-Visualization-QuickSight.png)
 
 
-- [Skills vs Salary distribution](./visualization/skills_vs_salary.pdf)
-
-![QuickSight](./visualization/skills_vs_salary.JPG)
-
-- [ Department vs Salary distribution](./visualization/dept_vs_salary.pdf)
-
-![QuickSight](./visualization/dept_vs_salary.JPG)
-
-- [Department vs Salary distribution](./visualization/age_vs_salary.pdf)
-
-![QuickSight](./visualization/age_vs_salary.JPG)
-
-
 ## Key Features
 ### Data Storage
 - **Scalable Storage**:
