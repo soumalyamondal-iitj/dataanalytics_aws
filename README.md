@@ -116,14 +116,13 @@ and visualizations of aggregated data.
   ![Model](./images/Model_Building_deployment_architecture.png)
 
   ### MLFlow - Tracking of model parameters
-  
   ![Model](./images/HuggingFace.png)
+
   
   ### Deployment in Huggingface
-
   Public URL for model: https://huggingface.co/spaces/soumalya-iitj/HRAnalytics_PredictSalary
-  
   ![Model](./images/HuggingFace.png)
+
 
 
 ## Demonstrattion of Data Visualization 
