@@ -1,6 +1,7 @@
 # Data Engineering Platform for Scalable Data Processing
 
 ## Table of Contents
+- Overview
 - Background
 - Requirement
 - Architecture Overview
@@ -10,9 +11,12 @@
 - Challenges encountered
 - Lessons learned
 
+## Overview
+Predicting employee salaries is essential for HR departments to ensure fair compensation practices, effective budget planning, and enhanced employee satisfaction. This project showcases the design and implementation of a comprehensive data engineering platform for analyzing streaming data from the HR department. The platform integrates multiple components for data ingestion, storage, processing, aggregation, and visualization, providing real-time insights and supporting data-driven decision-making.
+
 ## Background
 This repository contains the code and configuration files for a
-scalable data engineering platform built using AWS services.
+scalable data engineering platform built using AWS services to develop the .
 In modern data-driven organizations, the ability to efficiently
 ingest, store, process, aggregate, and visualize large volumes of data
 is critical. This project aims to design and implement a scalable data
