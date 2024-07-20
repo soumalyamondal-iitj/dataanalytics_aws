@@ -1,6 +1,6 @@
 # HR Analytics - Advance Data Engineering Platform in Cloud
 
-# Contributor
+## Contributor
 - Soumalya Mondal (G23AI1042)
 
 ## Table of Contents
