@@ -3,7 +3,7 @@
 ## Contributor
 - Soumalya Mondal (G23AI1042)
 - Joel Paul(G23AI1017)
-under the guidance of Prof. Pradip Sasmal
+- under the guidance of Prof. Pradip Sasmal
 
 ## Assignment
 - Please refer assignment specific README files here.
