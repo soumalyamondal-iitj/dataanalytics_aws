@@ -1,8 +1,9 @@
 # HR Analytics - Advance Data Engineering Platform in Cloud
 
 ## Contributor
-**- Soumalya Mondal (G23AI1042)
-- Joel Paul(G23AI1017)**
+- Soumalya Mondal (G23AI1042)
+- Joel Paul(G23AI1017)
+  
 
 ## Assignment
 - Please refer assignment specific README files here.
